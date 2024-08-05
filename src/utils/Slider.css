@@ -1,0 +1,19 @@
+.slider-image {
+    max-width: 100%;
+    width: 100;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.slide-background{
+  background-size: cover;
+  background-position: center;
+  padding: 0px; /* 你可以根据需要调整填充 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ }

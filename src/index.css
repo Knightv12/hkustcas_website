@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: NotoSans;
+  src: url(fonts/NotoSansTC-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Trade-Gothic;
+  src: url(fonts/Trade_Gothic_Next_LT_Pro_BdCn.ttf);
+}
+#scrollup {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+  align-items: center;
+  opacity: 50%;
+  display: flex;
+}
+#scrollup:hover {
+  backdrop-filter: blur(10px);
+  opacity: 100%;
+}
+
+body {
+  margin: 0px;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/background.webp),
+    linear-gradient(rgb(0, 53, 167), rgb(243, 248, 252), rgb(255, 255, 255));
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+  background-size: contain;
+  z-index: -1;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.9);
+  margin-top: 0px;
+  font-size: 90%;
+  font-family: Trade-Gothic;
+}
+
+.logo-container {
+  display: grid;
+  place-items: center;
+  max-width: fit-content;
+  padding: 0 2rem;
+}
+
+.navbar-logo {
+  transform: scale(1.5);
+  height: 50px;
+  width: auto;
+}
+
+.navbar > ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navbar ul > li {
+  transition: transform 0.25s;
+  position: relative;
+}
+
+.navbar ul > li:hover {
+  backdrop-filter: blur(10px);
+}
+
+.navbar ul > li:hover > .dropdown {
+  display: flex;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  list-style-type: none;
+  z-index: 999;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.navbar a:hover {
+  color: rgb(62, 175, 255);
+  transform: scale(1.1);
+}
+.navbar li {
+  flex: 1;
+}
+
+.banner {
+  width: 100%;
+  /* height: 100dvh; */
+  flex-shrink: 0;
+  z-index: 99;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.Title {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-family: NotoSans;
+}
+
+.info {
+  background-image: url(assets/frame01.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.font {
+  font-size: 20px;
+  font-family: NotoSans;
+}
+
+.footer {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-family: Notosans;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  z-index: 50;
+}
+
+.media-icons {
+  display: flex;
+  transform: scale(0.5);
+  gap: 3rem;
+}
+
+.art-container {
+  /* Styles for the container */
+  width: 100%;
+  height: 2302px;
+  background: url(assets/art-bg.jpg) center center no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.art-box {
+  /* Styles for the art box */
+  margin: 783px 10rem 10rem 5rem;
+  width: 1300px;
+  height: 1350px;
+  background: url(assets/art-box-bg.png) center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+}
+
+.back {
+  /* Styles for the back button */
+  width: 69px;
+  height: 8px;
+  margin-right: 8px;
+}
+
+.art-tab {
+  /* Styles for the art tab */
+
+  font-size: 25px;
+  line-height: 1;
+  color: #ffffff;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  margin-left: 3rem;
+  padding: 0;
+}
+
+.child-tab {
+  /* Styles for the child tab */
+}
+
+.list-box .item {
+  /* Styles for the list box */
+  width: 236px;
+  height: 334px;
+  margin-bottom: 30px;
+  display: inline-block;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #fff;
+  justify-content: space-around;
+}
+
+.page-icons {
+  /* Styles for the pagination icons */
+}
+
+.pagination {
+  /* Styles for the pagination controls */
+}
+
+.fadeIn {
+  
+  opacity: 0;
+  animation-timeline: view(block 90% 10%);
+  animation-name: fadeIn;
+  animation-fill-mode: both;
+  animation-duration: 1ms;
+  animation-timing-function: linear;
+  animation-range-start: cover;
+  animation-range-end: 150px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn-from-b {
+  
+  opacity: 0;
+  animation: fadeIn-from-b 1s ease-out forwards;
+  animation-play-state: paused;
+}
+
+@keyframes fadeIn-from-b {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
