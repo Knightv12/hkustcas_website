@@ -250,7 +250,7 @@ body::before {
   animation-duration: 1ms;
   animation-timing-function: linear;
   animation-range-start: cover;
-  animation-range-end: 150px;
+  animation-range-end: 100px;
 }
 
 @keyframes fadeIn {

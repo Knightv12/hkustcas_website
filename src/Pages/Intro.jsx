@@ -101,8 +101,8 @@ const IntroBox = ({ dialog, character, name, bg }) => {
 
         <img
           src={bg}
-          className="intro absolute max-w-full top-0 max-h-full z-[10] bg-white"
-          style={{ animationDelay: "0.75s" }}
+          className="intro fadeIn-from-b absolute max-w-full top-0 max-h-full z-[10] bg-white"
+          style={{ animationDelay: "0.55s" }}
         />
       </div>
     </div>
