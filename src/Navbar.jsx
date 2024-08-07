@@ -1,7 +1,29 @@
 import logo from "./assets/LOGO(new_transparent_background).png";
 import { Link } from "react-router-dom";
+import speakerIcon from "./assets/speaker.png";
+import muteIcon from "./assets/mute.png";
+import React, { useState, useEffect, useRef } from "react";
 
 function Navbar() {
+  const [icon, setIcon] = useState(muteIcon);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(new Audio("/Grievous_Lady.wav"));
+
+  const play_music = () => {
+    const audio = audioRef.current;
+
+    if (!isPlaying) {
+      audio.play();
+      setIsPlaying(true);
+      setIcon(speakerIcon);
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      setIsPlaying(false);
+      setIcon(muteIcon);
+    }
+  };
+
   return (
     <nav className="navbar z-[999]">
       <ul>
@@ -12,7 +34,7 @@ function Navbar() {
         </li>
         <li>
           <b>
-          <Link to="/latestnews">最新消息</Link>
+            <Link to="/latestnews">最新消息</Link>
           </b>
         </li>
         <li>
@@ -46,7 +68,7 @@ function Navbar() {
               <Link to="/product">學會產品</Link>
             </li>
             <li>
-             <Link to="/discount">店鋪優惠</Link>
+              <Link to="/discount">店鋪優惠</Link>
             </li>
           </ul>
         </li>
@@ -61,17 +83,19 @@ function Navbar() {
           </b>
           <ul className="dropdown">
             <li>
-              <a  target="_blank"
-                  href="https://www.instagram.com/hkustsucas/"
-                  title="Go to Instagram"
+              <a
+                target="_blank"
+                href="https://www.instagram.com/hkustsucas/"
+                title="Go to Instagram"
               >
                 Instagram
               </a>
             </li>
             <li>
-              <a  target="_blank"
-                  href="https://www.facebook.com/hkustsucas/"
-                  title="Go to Facebook"
+              <a
+                target="_blank"
+                href="https://www.facebook.com/hkustsucas/"
+                title="Go to Facebook"
               >
                 Facebook
               </a>
@@ -85,6 +109,17 @@ function Navbar() {
           <b>
             <Link to="/contact">聯絡我們</Link>
           </b>
+        </li>
+        <li className="music flex justify-end">
+          <div className="h-full w-fit grid place-items-center mr-6">
+            <img
+              src={icon}
+              className="h-5 aspect-square"
+              alt="music"
+              onClick={play_music}
+              style={{ maxHeight: "50px" }}
+            />
+          </div>
         </li>
       </ul>
     </nav>
