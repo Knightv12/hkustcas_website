@@ -11,9 +11,9 @@ import "./Slider.css";
 
 const SliderImage = ({ src }) => {
   return (
-    <div className="w-full h-full relative flex items-center overflow-hidden">
-      <img src={src} className="z-[900] p-10 slider-image" />
-      <div className="absolute left-0 w-full h-full z-[-1] opacity-80">
+    <div className="w-full h-full relative flex items-center overflow-hidden rounded-2xl">
+      <img src={src} className="z-[900] p-10 slider-image " />
+      <div className="absolute left-0 w-full h-full z-[-1] opacity-95">
         <img src={src} className="w-full object-contain obj" />
       </div>
     </div>

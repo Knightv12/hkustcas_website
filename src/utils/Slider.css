@@ -11,9 +11,18 @@
 .slide-background{
   background-size: cover;
   background-position: center;
-  padding:0px 20px 0px; /* 你可以根据需要调整填充 */
+  padding:0px 60px 0px; /* 你可以根据需要调整填充 */
   display: flex;
   justify-content: center;
   align-items: center;
 
+ }
+.splide__pagination{
+  bottom: -2rem;
+}
+ .splide__arrow{
+  background-color: #fbc531;
+ }
+ .splide__pagination__page.is-active{
+  background-color: #fbc531;
  }
