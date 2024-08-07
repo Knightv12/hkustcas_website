@@ -3,7 +3,7 @@ import instagramIcon from "./assets/instagram.png";
 import Scrollup from "./assets/icons8-up-50.png";
 function Footer() {
   return (
-    <div className="footer !z-[120]">
+    <div className="footer !z-[999]">
       <footer
         style={{
           display: "flex",

@@ -4,12 +4,13 @@ import IG from "../utils/IG.jsx";
 
 const Home = () => {
   return (
-    <div style={{paddingTop: "53px"}}>
+    <div className="pt-53px !z-[9999]">
       {/* <Banner /> */}
       <Slider />
       <br/>
-      <h1 className="Title my-[100px]">Welcome to HKUST CAS!</h1>
-      
+      <h1 className="Title my-[100px] bg-gray-800 text-white">Welcome to HKUST CAS!
+      </h1>
+        
       <IG />
     </div>
   );

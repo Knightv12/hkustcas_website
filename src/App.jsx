@@ -4,12 +4,13 @@ import { Outlet } from "react-router-dom";
 import Bg from "/src/Bg.jsx";
 
 function App() {
-  
   return (
     <div className="main">
       {/* <Bg /> */}
       <Navbar />
-      <Outlet />
+      <div className="bg relative">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
