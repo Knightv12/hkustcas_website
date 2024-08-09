@@ -6,12 +6,14 @@
     object-fit: cover;
     display: block;
     margin: auto;
+    border-color: white;
+    border-width: 10px;
 }
 
 .slide-background{
   background-size: cover;
   background-position: center;
-  padding:55px 60px 0px; /* 你可以根据需要调整填充 */
+  padding:0px 60px 0px; /* 你可以根据需要调整填充 */
   display: flex;
   justify-content: center;
   align-items: center;

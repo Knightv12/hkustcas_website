@@ -25,7 +25,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar z-[999]">
+    <nav className="navbar z-[9999]">
       <ul>
         <li className="logo-container">
           <Link to="/" style={{ padding: 0 }}>

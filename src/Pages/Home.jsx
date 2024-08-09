@@ -1,17 +1,13 @@
-import Slider from "../utils/Slider";
-/* import Banner from "../Banner.jsx"; */
-import IG from "../utils/IG.jsx";
+import ParallaxPages from "../utils/Parallax.jsx";
+import { BackgroundBeams } from "../components/ui/background-beams.jsx";
 
 const Home = () => {
   return (
-    <div className="pt-53px !z-[9999]">
-      {/* <Banner /> */}
-      <Slider />
-      <br/>
-      <h1 className="Title my-[100px] bg-gray-800 text-white">Welcome to HKUST CAS!
-      </h1>
+    <div className="!z-[9999] relative flex h-full overflow-hidden">
+      <div className="flex-1">
         
-      <IG />
+        <ParallaxPages />
+      </div>
     </div>
   );
 };
