@@ -20,7 +20,7 @@ const ParallaxPages = () => {
             <ParallaxLayer offset={1} speed={1} factor={1} >
             <div className="animation_layer w-full h-full bg-slate-800" id="recent_activities">
                 
-                <Slider />
+                <Slider className="absolute"/>
                 {/* <br/>
                 <h1 className="Title my-[100px] bg-gray-800 text-white">Welcome to HKUST CAS!
                 </h1> */}

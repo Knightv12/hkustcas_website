@@ -8,7 +8,7 @@ function App() {
     <div className="main h-full flex flex-col">
       {/* <Bg /> */}
       <Navbar />
-      <div className="bg relative flex-1 z-[999]">
+      <div className="bg relative flex-1 z-[999] overflow-auto">
         <Outlet />
       </div>
       <Footer />
