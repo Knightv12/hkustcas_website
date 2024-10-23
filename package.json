@@ -15,13 +15,14 @@
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "@tabler/icons-react": "^3.14.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.3.24",
+    "framer-motion": "^11.3.31",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.1",
     "react-social-media-embed": "^2.5.13",
-    "tailwind-merge": "^2.4.0",
+    "tailwind-merge": "^2.5.2",
     "update-js": "^1.9.1"
   },
   "devDependencies": {

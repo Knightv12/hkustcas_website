@@ -32,8 +32,8 @@ body {
   /* background-color: black; */
 }
 
-#root{
-  height:100dvh;
+#root {
+  height: 100dvh;
 }
 
 /* body::before {
@@ -167,13 +167,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  top: 0;
+  left: 0;
 }
 
-
 #starrysky {
-  background-color: rgb(2 6 23);
+  background: linear-gradient(to bottom, rgb(2, 6, 23) 0%, rgb(6, 8, 82) 100%);
   background-size: contain;
-
 }
 
 .main {
@@ -289,13 +289,7 @@ body {
 
 .fadeIn {
   opacity: 0;
-  animation-timeline: view(block 70% 10%);
-  animation-name: fadeIn;
-  animation-fill-mode: both;
-  animation-duration: 1ms;
-  animation-timing-function: linear;
-  animation-range-start: cover;
-  animation-range-end: 100px;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 @keyframes fadeIn {

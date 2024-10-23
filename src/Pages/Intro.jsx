@@ -92,7 +92,7 @@ const UpdateImg = ({ src, delay = 0, zIndex }) => {
 const IntroBox = ({ dialog, character, name, bg }) => {
   return (
     <div className="intro-box-container flex items-center justify-center ">
-      <div className="introbox fadeIn w-[50%] mt-28 flex relative max-w-full justify-center overflow-hidden h-[80dvh] ">
+      <div className="introbox w-[50%] mt-28 flex relative max-w-full justify-center overflow-hidden h-[80dvh] ">
         <UpdateImg src={dialog} zIndex={99} />
 
         <UpdateImg src={character} zIndex={98} delay={0.25} />
@@ -114,7 +114,7 @@ const Intro = () => {
     const handleInView = () => {
       const intro = document.querySelectorAll(".intro");
       const windowHeight = window.innerHeight;
-      intro.forEach((element,index) => {
+      intro.forEach((element, index) => {
         const rect = element.getBoundingClientRect();
         index == 0 && console.log(rect.top, windowHeight);
         if (rect.top < windowHeight && rect.bottom > 0) {
@@ -128,6 +128,35 @@ const Intro = () => {
     window.addEventListener("scroll", handleInView);
     return () => {
       window.removeEventListener("scroll", handleInView);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll(".intro").forEach((element) => {
+            element.style.animationPlayState = "running";
+          });
+        }
+      });
+    };
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3,
+    };
+    const observer = new IntersectionObserver(handleIntersection, options);
+    const targets = document.querySelectorAll(".intro-box-container");
+
+    targets.forEach((target) => {
+      observer.observe(target);
+    });
+
+    return () => {
+      targets.forEach((target) => {
+        observer.unobserve(target);
+      });
     };
   }, []);
 

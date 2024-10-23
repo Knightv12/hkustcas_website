@@ -1,12 +1,13 @@
 import emag1 from "../assets/emag1cover.png";
 import emag2 from "../assets/emag2cover.png";
-
+import TimelineEmag from "../utils/Timeline.jsx";
 import React from 'react';
 import { Link } from 'react-router-dom'; // Ensure this import is present
 
 const Emag = () => {
     return (
-        <div className="art-container">
+        <TimelineEmag/>
+        /* <div className="art-container">
             <div className="art-box">
                 <div className="back">
                     <Link to="/">
@@ -52,7 +53,7 @@ const Emag = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */
     );
 }
 
